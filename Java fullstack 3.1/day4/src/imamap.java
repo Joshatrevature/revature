@@ -5,15 +5,11 @@ import java.util.Set;
 
 public class imamap {
     public static void main(String[] args) {
-        Map map = new HashMap();
-        map.put("name", "Mark");
-        map.put("roll", 1000);
-        map.put("email", "m@gmail.com");
-        map.put("active", true);
+        HashMap<Integer,String> map = new HashMap();
 
-
+        //1
         map.put(1, "Bobby");
-        map.put("Hank", "Hill");
+        map.put(2, "Hill");
         Set set = map.entrySet();
         Iterator iterator = set.iterator();
         while (iterator.hasNext()){
@@ -21,7 +17,10 @@ public class imamap {
             Map.Entry entry = (Map.Entry)iterator.next();
             System.out.println(entry.getKey() +" : "+ entry.getValue());
         }
-
+        //2
+        System.out.println(map.size());
+        //3
+        Map<Integer,String > clonemap = (HashMap<Integer, String>) map.clone();
 
     }
 }
